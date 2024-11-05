@@ -28,3 +28,18 @@ alpha_to_int_dict ={
 }
 
 int_to_alpha_dict = dict(map(reversed, alpha_to_int_dict.items()))
+
+multi_inv_dict = {
+    1:1,
+    3:9,
+    5:21,
+    7:15,
+    9:3,
+    11:19,
+    15:7,
+    17:23,
+    19:11,
+    21:5,
+    23:17,
+    25:25
+}
