@@ -89,3 +89,17 @@ def affine_decrypt(encrypted_string,alpha,beta):
     # Step 4: Print
     print(f'Your message decoded with affine cipher (with parameters alpha={alpha}, beta={beta}) is:')
     print(plain_text)
+
+def affine_attack(encrypted_text):
+    '''Brute force affine attack, calls every possible alpha and beta for decryption
+    Args:
+        encrypted_text (str): The encrypted message
+    '''
+    # Just call affine decrypt for every possible (alpha,beta)
+    for alpha in range(26):
+        # Check gcd = 1
+        if alpha % 2 == 0 or alpha % 13 == 0:
+            pass
+        else:
+            for beta in range(26):
+                affine_decrypt(encrypted_text,alpha,beta)
