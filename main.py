@@ -19,15 +19,15 @@ while True:
                 case 'encrypt':
                     alpha = input('parameter alpha: ')
                     beta = input('parameter beta: ')
-                    plain_text = input('Input plaintext message: ')
+                    plain_text = input('Input plaintext message: ').lower()
                     affine_encrypt(plain_text,alpha,beta)
                 case 'decrypt':
                     alpha = input('parameter alpha: ')
                     beta = input('parameter beta: ')
-                    encrypted_text = input('Input encrypted text: ')
+                    encrypted_text = input('Input encrypted text: ').lower()
                     affine_decrypt(encrypted_text,alpha,beta)
                 case 'attack':
-                    encrypted_text = input('Input encrypted text: ')
+                    encrypted_text = input('Input encrypted text: ').lower()
                     affine_attack(encrypted_text)
                 case _:
                     print('Error, please enter encrypt or decrypt')

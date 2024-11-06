@@ -21,12 +21,12 @@ def affine_encrypt(plain_text,alpha,beta):
     for char in plain_text:
         plaintext_int.append(alpha_to_int_dict[char])
     try:
-        alpha = alpha_to_int_dict[alpha]
-    except KeyError:
+        alpha = alpha_to_int_dict[alpha.lower()]
+    except:
         alpha = int(alpha)
     try:
-        beta = alpha_to_int_dict[beta]
-    except KeyError:
+        beta = alpha_to_int_dict[beta.lower()]
+    except:
         beta = int(beta)
 
     # Safety Check: GCD with 26 has to be 1
@@ -63,12 +63,12 @@ def affine_decrypt(encrypted_string,alpha,beta):
     for char in encrypted_string:
         encrypted_int.append(alpha_to_int_dict[char])
     try:
-        alpha = alpha_to_int_dict[alpha]
-    except KeyError:
+        alpha = alpha_to_int_dict[alpha.lower()]
+    except:
         alpha = int(alpha)
     try:
-        beta = alpha_to_int_dict[beta]
-    except KeyError:
+        beta = alpha_to_int_dict[beta.lower()]
+    except:
         beta = int(beta)
 
     # Safety Check: GCD with 26 has to be 1
